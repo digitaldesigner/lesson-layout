@@ -1,0 +1,120 @@
+// TOOLS
+@import "_variables.less";
+@import "_mixins.less";
+
+:root {
+  color-scheme: dark;
+}
+
+html, body { 
+  background:var(--clay-100-dark);
+}
+ul.container li.card {
+  background:var(--base-dark);
+  box-shadow:0 0 0 1px rgba(255,255,255,0.1);
+  
+  .header {
+   h5,h3 {
+     color:var(--clay-300);
+   }
+  }
+
+   .contents {
+    
+     &.overflow { 
+       &::after {
+         background: rgb(0,0,0);
+         background: linear-gradient(0deg, rgba(27,19,65,1) 0%, rgba(27,19,65,0) 100%);
+         border-bottom:5px solid var(--base-dark);
+       }
+     }
+     
+     h1,h2,h3,h4 { 
+      color:var(--base); 
+      -webkit-font-smoothing: antialiased;
+      font-smoothing: antialiased;
+     }
+     
+     p,li {
+       color:var(--clay-300);
+       
+       strong {
+         color:var(--base); 
+       }
+       
+       code {
+         border-color:#36FF8D;
+         background:rgba(0,0,0,0.9);
+         color:var(--clay-100);
+       }
+     }
+     
+     div.embed,
+     div.video {
+       background:darken(#231955,10%);
+     }
+     
+     ul,ol {
+       li {
+         color:var(--clay-300);
+         
+         strong {
+           color:var(--base); 
+         }
+        }
+     }
+     
+     ul li {
+       &::marker {
+         color:var(--purple-500);
+       }
+     }
+     ol li {
+       &::marker {
+         color:var(--clay-200);
+       }
+     }
+     
+     blockquote {
+       background:rgba(0,0,0,0.3);
+       border-color:rgba(0,0,0,0.8);
+       color:white;
+     }
+     
+   }
+   
+   label {
+     background:darken(#231955,2%);
+     color:var(--clay-300);
+   }
+   
+   a.dismiss {
+     background:darken(#231955,20%);
+     
+     em {
+       color:#ecdbba;
+     }
+   }
+   
+   &.completed {
+     box-shadow:0 0 0 2px var(--green-500);
+     
+     &::before {
+      background-color:var(--green-500); 
+     }
+   }
+   
+   &.expose {
+     &.completed {
+       box-shadow:0 0 0 2px var(--green-500);   
+     }
+     a.expander {
+       background:darken(#231955,20%);
+       color:#ecdbba;
+     }
+     
+     .contents p a {
+       color:var(--green-500)!important;
+     }
+   }
+}
