@@ -4,7 +4,7 @@
 @import url('_reset.less');
 
 html, body { 
-  background:var(--clay-100);
+  background:var(--light-background);
   border:0;
   padding:0;
   .bodyfont(19px);
@@ -17,7 +17,7 @@ html, body {
 }
 
 ul.container {
-  padding:20vh 5vw;
+  padding:50px 5vw;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -47,16 +47,10 @@ ul.container li.card {
   box-sizing:border-box;
   width:80vw;
   min-width:80vw;
-  background:var(--base);
+  background:var(--light-base-01);
   border-radius:10px;
   position:relative;
-  box-shadow: 
-    0px 0px 0px 1px rgba(6, 20, 34, 0.10),
-    0px 1px 0px 0px rgba(0, 0, 0, 0.09),
-    0px 2px 2px 0px rgba(0, 0, 0, 0.04),
-    0px 3px 3px 0px rgba(0, 0, 0, 0.02),
-    0px 4px 4px 0px rgba(0, 0, 0, 0.01);
-    
+  box-shadow:var(--light-base-shadow);
   display:flex;
   flex-direction:column;
   gap:20px;
@@ -70,22 +64,14 @@ ul.container li.card {
     gap:10px;
     padding:40px 40px 0;
     
-    h5,h3{
+    h5{
       padding:0;
       margin:0;
       width:100%;
       .inter();
-    }
-    h5 {
-      color:var(--charcoal-600);
+      color:var(--light-text-03);
       font-weight:normal;
       font-size:13px;
-    }
-    h3 {
-      color:var(--charcoal-1000);
-      font-size:20px;
-      line-height:26px;
-      font-weight:500;
     }
   }
   
@@ -103,7 +89,7 @@ ul.container li.card {
     p {
       font-size:15px;
       line-height:26px;
-      color:var(--charcoal-900);
+      color:var(--light-text-02);
       
       a {
         color:inherit;
@@ -123,7 +109,7 @@ ul.container li.card {
       display:flex;
       align-items:center;
       justify-content:center;
-      background:var(--clay-200); 
+      background:var(--light-base-02); 
       border-radius:6px;
       width:100%;
 
@@ -138,7 +124,7 @@ ul.container li.card {
       display:flex;
       align-items:center;
       justify-content:center;
-      background:var(--clay-200); 
+      background:var(--light-base-02); 
       border-radius:6px;
     }
     
@@ -153,9 +139,9 @@ ul.container li.card {
         left:5px;
         width:~"calc(100% - 10px)";
         height:80px;
-        background: rgb(255,255,255);
-        background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
-        border-bottom:5px solid white;
+        background: transparent;
+        background: linear-gradient(0deg, var(--light-base-01) 0%, transparent 100%);
+        border-bottom:5px solid var(--light-base-01);
         z-index:1;
       }
     }
@@ -164,7 +150,7 @@ ul.container li.card {
   label {
     display:flex;
     flex-direction:row;
-    background:var(--clay-100);
+    background:var(--light-base-02);
     margin:0 5px;
     border-radius:5px;
     align-items:center;
@@ -173,7 +159,7 @@ ul.container li.card {
     padding:25px 45px;
     gap:10px;
     justify-content:center;
-    color:var(--clay-700);
+    color:var(--light-text-03);
     cursor:pointer;
     z-index:5;
     display:none;
@@ -194,14 +180,14 @@ ul.container li.card {
   }
   
   &.completed {
-    box-shadow:0 0 0 1px var(--green-500), inset 0 0 0 1px var(--green-500);      
+    box-shadow:0 0 0 1px var(--light-complete), inset 0 0 0 1px var(--light-complete);      
     
     &::before {
       content:'';
       position:absolute;
       right:10px;
       top:10px;
-      background:url('../images/check-circle-large.svg') center no-repeat var(--green-500);
+      background:url('../images/check-circle-large.svg') center no-repeat var(--light-complete);
       border-radius:10px;
       width:50px;
       height:50px;
@@ -245,13 +231,13 @@ ul.container li.card.expose {
     left:auto;
     right:20px;
     top:20px;
-    background:var(--clay-100);
+    background:var(--light-base-02);
     justify-content:center;
     .inter;
     font-size:30px;
     font-weight:300;
     line-height:44px;
-    color:var(--charcoal-900);
+    color:var(--light-text-01);
     border-radius:10px;
     text-decoration:none;
     text-indent:0;
@@ -266,7 +252,8 @@ ul.container li.card.expose {
     margin-top:15px;
     flex-grow:1;
     max-height:none;
-    overflow:auto;
+    overflow-y:auto;
+    overflow-x:hidden;
     padding-bottom:50px;
     gap:30px;
     
@@ -276,7 +263,7 @@ ul.container li.card.expose {
   }
 
   &.completed {
-    box-shadow:0 0 0 2px var(--green-500);      
+    box-shadow:0 0 0 2px var(--light-complete);      
     
     &::before {
       display:none;
@@ -302,14 +289,10 @@ ul.container li.card.expose {
   
   strong {
     font-weight:600;
-    color:var(--charcoal-1000);
+    color:var(--light-text-01);
   }
   em {
     font-style:italic;
-  }
-  a {
-    color:#304DDB;
-    text-decoration:underline;
   }
   
   ol,ul {
@@ -326,16 +309,17 @@ ul.container li.card.expose {
     padding:0 30px 0 10px;
     .bodyfont(15px);
     line-height:24px;
+    color:var(--light-text-02);
   }
   
   ol li {
     list-style: auto;
     
     &::marker {
-      color:var(--charcoal-1000);
       .bodyfont(15px);
       line-height:24px;
       font-weight:500;
+      color:var(--light-text-01);
     }
   }
   
@@ -343,7 +327,7 @@ ul.container li.card.expose {
     list-style:disc;
     
     &::marker {
-      color:var(--green-500);
+      color:var(--light-accent);
     }
   }
   
@@ -352,13 +336,13 @@ ul.container li.card.expose {
     width:20%;
     margin:20px 40%;
     border:0;
-    border-bottom:3px solid #FABF5A;
+    border-bottom:3px solid var(--light-accent);
     transform:rotate(-5deg);
   }
   h1,h2,h3,h4 {
     .inter(20px);
     font-weight:500;
-    color:var(--charcoal-1000);
+    color:var(--light-text-01);
     width:100%;
   }
   h1 {
@@ -374,10 +358,8 @@ ul.container li.card.expose {
   }
   blockquote {
     box-sizing:border-box;
-    border:1px solid var(--clay-300);
-    border-bottom-width:2px;
-    background:var(--clay-100);
-    color:var(--clay-900);
+    background:var(--light-base-02);
+    color:var(--light-text-02);
     width:100%;
     padding:40px;
     border-radius:10px;
@@ -387,15 +369,21 @@ ul.container li.card.expose {
   p code,li code {
     font-size:90%;
     font-weight: normal;
-    background: lighten(#36FF8D,35%);
-    border: 1px solid #36FF8D;
-    color: #111;
+    background: transparent;
+    border: 1px solid var(--light-accent);
+    color:var(--light-text-01);
     padding: 3px 8px;
     border-radius: 5px;
   }
 }
+li .contents p a,
 li.expose .contents p a {
-  color:var(--purple-500)!important;
+  color:var(--light-text-link)!important;
+  text-decoration:underline;
+  
+  &:hover {
+    color:var(--light-text-link-hover)!important;
+  }
 }
 li.expose {
   h1 {
@@ -410,11 +398,12 @@ li.expose {
     gap:30px;
     
     li.card {
-      min-width:400px;
-      max-width:400px;
-      width:400px;
-      min-height:80vh;
-      height:80vh;
+      min-width:500px;
+      max-width:500px;
+      width:500px;
+      max-height:70vh;
+      min-height:70vh;
+      height:70vh;
       
        &.expose {
          top:50px;

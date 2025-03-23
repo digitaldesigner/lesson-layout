@@ -1,113 +1,114 @@
 :root {
-  --clay-100: #FAF8F7;
-  --clay-100-dark: #231955;
-  --clay-200: #F5F2F0;
-  --clay-300: #EDE8E6;
-  --clay-700: #8A7B74;
-  --clay-900: #574F4B;
-  --green-100: #F2FFF0;
-  --green-400: #BCF1CA;
-  --green-500: #47C47D;
-  --green-800: #136A2D;
-  --charcoal-600: #7E8E9E;
-  --charcoal-900: #314351;
-  --charcoal-1000: #253642;
-  --base: #FFF;
-  --base-dark: #1b1341;
-  --purple-100: #f9f6ff;
-  --purple-300: #c889ff;
-  --purple-500: #892cdc;
-  --purple-600: #874bf7;
-  --pink-500: #f10086;
+  --light-text-01: #253642;
+  --light-text-02: #574F4B;
+  --light-text-03: #8A7B74;
+  --light-text-link: #892CDC;
+  --light-text-link-hover: #253642;
+  --light-base-shadow: 0px 0px 0px 1px rgba(6, 20, 34, 0.1), 0px 1px 0px 0px rgba(0, 0, 0, 0.09), 0px 2px 2px 0px rgba(0, 0, 0, 0.04), 0px 3px 3px 0px rgba(0, 0, 0, 0.02), 0px 4px 4px 0px rgba(0, 0, 0, 0.01);
+  --light-accent: #892cdc;
+  --light-complete: #47C47D;
+  --light-base-01: #FFFFFF;
+  --light-base-02: #FAF8F7;
+  --light-background: #FAF8F7;
+  --dark-text-01: #FFFFFF;
+  --dark-text-02: #EDE8E6;
+  --dark-text-03: #A79FC6;
+  --dark-text-link: #36FF8D;
+  --dark-text-link-hover: #FFFFFF;
+  --dark-base-shadow: rgba(255, 255, 255, 0.1);
+  --dark-accent: #36FF8D;
+  --dark-complete: #47C47D;
+  --dark-base-01: #1B1341;
+  --dark-base-02: rgba(0, 0, 0, 0.3);
+  --dark-background: #231955;
 }
 :root {
   color-scheme: dark;
 }
 html,
 body {
-  background: var(--clay-100-dark);
+  background: var(--dark-background);
 }
 ul.container li.card {
-  background: var(--base-dark);
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1);
+  background: var(--dark-base-01);
+  box-shadow: 0 0 0 1px var(--dark-base-shadow);
 }
-ul.container li.card .header h5,
-ul.container li.card .header h3 {
-  color: var(--clay-300);
+ul.container li.card .header h5 {
+  color: var(--dark-text-03);
 }
 ul.container li.card .contents.overflow::after {
-  background: #000000;
-  background: linear-gradient(0deg, #1b1341 0%, rgba(27, 19, 65, 0) 100%);
-  border-bottom: 5px solid var(--base-dark);
+  background: transparent;
+  background: linear-gradient(0deg, var(--dark-base-01) 0%, transparent 100%);
+  border-bottom: 5px solid var(--dark-base-01);
 }
 ul.container li.card .contents h1,
 ul.container li.card .contents h2,
 ul.container li.card .contents h3,
 ul.container li.card .contents h4 {
-  color: var(--base);
+  color: var(--dark-text-01);
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
 }
 ul.container li.card .contents p,
 ul.container li.card .contents li {
-  color: var(--clay-300);
+  color: var(--dark-text-02);
 }
 ul.container li.card .contents p strong,
 ul.container li.card .contents li strong {
-  color: var(--base);
+  color: var(--dark-text-01);
 }
 ul.container li.card .contents p code,
 ul.container li.card .contents li code {
-  border-color: #36FF8D;
-  background: rgba(0, 0, 0, 0.9);
-  color: var(--clay-100);
+  border-color: var(--dark-accent);
+  background: var(--dark-base-02);
+  color: var(--dark-text-01);
 }
 ul.container li.card .contents div.embed,
 ul.container li.card .contents div.video {
-  background: #130d2e;
+  background: var(--dark-base-02);
+}
+ul.container li.card .contents hr {
+  border-bottom-color: var(--dark-accent);
 }
 ul.container li.card .contents ul li,
 ul.container li.card .contents ol li {
-  color: var(--clay-300);
+  color: var(--dark-text-02);
 }
 ul.container li.card .contents ul li strong,
 ul.container li.card .contents ol li strong {
-  color: var(--base);
+  color: var(--dark-text-01);
 }
 ul.container li.card .contents ul li::marker {
-  color: var(--purple-500);
+  color: var(--dark-accent);
 }
 ul.container li.card .contents ol li::marker {
-  color: var(--clay-200);
+  color: var(--dark-text-01);
 }
 ul.container li.card .contents blockquote {
-  background: rgba(0, 0, 0, 0.3);
-  border-color: rgba(0, 0, 0, 0.8);
-  color: white;
+  background: var(--dark-base-02);
+  border: 1px solid var(--dark-base-shadow);
+  color: var(--dark-text-01);
 }
 ul.container li.card label {
-  background: #20174d;
-  color: var(--clay-300);
-}
-ul.container li.card a.dismiss {
-  background: #030206;
-}
-ul.container li.card a.dismiss em {
-  color: #ecdbba;
+  background: var(--dark-base-02);
+  color: var(--dark-text-03);
 }
 ul.container li.card.completed {
-  box-shadow: 0 0 0 2px var(--green-500);
+  box-shadow: 0 0 0 2px var(--dark-complete);
 }
 ul.container li.card.completed::before {
-  background-color: var(--green-500);
+  background-color: var(--dark-complete);
 }
 ul.container li.card.expose.completed {
-  box-shadow: 0 0 0 2px var(--green-500);
+  box-shadow: 0 0 0 2px var(--dark-complete);
 }
 ul.container li.card.expose a.expander {
-  background: #030206;
-  color: #ecdbba;
+  background: var(--dark-base-02);
+  color: var(--dark-text-01);
 }
 ul.container li.card.expose .contents p a {
-  color: var(--green-500) !important;
+  color: var(--dark-text-link) !important;
+}
+ul.container li.card.expose .contents p a:hover {
+  color: var(--dark-text-link-hover) !important;
 }
