@@ -14,17 +14,46 @@
   </head>
   <body>
     <ul class="container" id="cards">
-      <li class="card" id="permalink-one">
-        <a href="#" draggable="false" class="expander">×</a>
+      
+      <li class="card" id="intro">
+        <a href="javascript://" draggable="false" class="expander">×</a>
         <div class="header">
           <h5>Intro</h5>
         </div>
         <div class="contents overflow">
-          <h1>Example Formatting</h1>
-          <p>Once upon a time, in a paragraph far, far away, there lived a curious sentence. One day, it decided to follow a <a href="#">link to nowhere</a> just to see what would happen (spoiler: nothing did).</p>
+          <h1>Welcome 👋</h1>
+          <p>Welcome to <strong>Lesson Layout</strong> <a href="https://github.com/digitaldesigner/lesson-layout/"  target="_blank">(GitHub)</a> &mdash; a simple web layout for displaying lists, lessons, to-do's, release notes and anything that works in a horizontal format.</p>
+          <ul>
+            <li>🚀 <strong>Easy</strong> &mdash; It's lightweight and easy to build on, no packages or dependencies. Just plain ol' HTML and CSS with a little JavaScript.</li>
+            <li>📱 <strong>Mobile-first</strong> &mdash; Simple card design feels great on mobile devices and works well at any size.</li>
+            <li>🌝 <strong>Dark-mode</strong> &mdash; Easy-to-use theme comes with dark-mode read to go.</li>
+          </ul>
+          <h2>🗂️ Cards</h2>
+          <p>Regardless of how much content is contained, each card can be expanded with a click or tap. To close, press <code>ESC</code> or click the cross. There is a layout calculation to make sure there's always a little part of the next card visible, so horizontal scroll is obvious to the user &mdash; and scroll snapping to make sure cards are always perfectly centered.</p>
+          <h2>✅ Mark as Done</h2>
+          <p>Each card can be marked as complete, which will save its status to <code>localStorage</code>. If cards are completed, the page will be loaded to the next incomplete card, to save the user from scrolling endlessly!</p>
+          <label>
+            <input type="checkbox" class="complete-task">
+            <span>Mark as complete</span>
+          </label>
+        </div>
+      </li>
+      
+      <li class="card" id="options">
+        <a href="javascript://" draggable="false" class="expander">×</a>
+        <div class="header">
+          <h5>Options</h5>
+        </div>
+        <div class="contents overflow">
+          <h1>Theming</h1>
+          <p>The light and dark themes are semantically split and easy to theme using the separate <code>--var</code> styles. Out of the box the theme is accessible, mobile-friendly and cross-browser compliant.</p>
+          <p>Written in <strong>LESS</strong>, you can make any style adjustments in <em>less/_variables.less</em></p>
+          <hr />
+          <h1>Example</h1>
+          <p>Once upon a time, in a paragraph far, far away, there lived a curious sentence. One day, it decided to follow a <a href="javascript://">link to nowhere</a> just to see what would happen (spoiler: nothing did).</p>
           <p>Along the way, it made a <strong>strong statement</strong> about the superiority of llamas over alpacas, which caused quite a stir. To calm things down, it whispered an <em>emphasized word</em> into the HTML void. And just when everyone thought the drama was over, it pulled out some <code>magic();</code> and vanished in a semicolon cloud.</p>
           <blockquote>"The early bird gets the worm, but the second mouse gets the cheese." – Unknown Genius</blockquote>
-          <h2>Lists</h2>
+          <h3>Lists</h3>
           <ul>
             <li>Bananas <strong>yum!</strong></li>
             <li>Chickens</li>
@@ -35,10 +64,8 @@
             <li>Conquer the world</li>
             <li>Take a nap</li>
           </ol>
-          <hr />
-          <h1>Media</h1>
+          <h2>Images</h2>
           <p>You can include a variety of media and it will be styled according to the device width:</p>
-          <h3>Images</h3>
           <img src="https://content-hub.imgix.net/3PMTpjsn9rhbU9TMcGUsv4/9cc126d8dffcaeacbfdd9f51da86e598/2025_911_GT3_hero.jpg?w=2064" />
           <h3>Video</h3>
           <p>Either by <strong>HTML5</strong></p>
@@ -56,8 +83,27 @@
           </label>
         </div>
       </li>
+      <li class="card" id="credit">
+        <a href="javascript://" draggable="false" class="expander">×</a>
+        <div class="header">
+          <h5>About</h5>
+        </div>
+        <div class="contents overflow">
+          <h1>Credit</h1>
+          <p>This little experiment was made by <a href="https://buzzusborne.com/" target="_blank">Buzz</a> &mdash; a coach, startup advisor and software designer (and front-end code enthusiast). Originally built for his online-learning AI course, <a href="https://2weeks.ai/" target="_blank">2 Weeks AI</a>, Buzz chucked it online for anyone to use strong>for free</strong> &mdash; as a way to give back to the community.</p>
+          <h1>☕</h1>
+          <p>If you've found this useful, please consider <a href="https://buymeacoffee.com/buzz" target="_blank">donating a coffee!</a></p>
+          
+          <img src="https://buzzusborne.com/work/_images/_site/buzz-usborne-2024.png" />
+          
+          <label>
+            <input type="checkbox" class="complete-task">
+            <span>Mark as complete</span>
+          </label>
+        </div>
+      </li>
       <li class="card" id="permalink-two">
-        <a href="#" draggable="false" class="expander">×</a>
+        <a href="javascript://" draggable="false" class="expander">×</a>
         <div class="header">
           <h5>1.0</h5>
         </div>
@@ -71,7 +117,7 @@
         </div>
       </li>
       <li class="card" id="permalink-three">
-        <a href="#" draggable="false" class="expander">×</a>
+        <a href="javascript://" draggable="false" class="expander">×</a>
         <div class="header">
           <h5>2.0</h5>
         </div>
@@ -85,7 +131,7 @@
         </div>
       </li>
       <li class="card" id="permalink-four">
-        <a href="#" draggable="false" class="expander">×</a>
+        <a href="javascript://" draggable="false" class="expander">×</a>
         <div class="header">
           <h5>3.0</h5>
         </div>
